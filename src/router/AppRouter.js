@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import NavBar from "../components/NavBar";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import Main from "../pages/Main";
+import Home from "../pages/Home";
 import MovieDetail from "../pages/MovieDetail"
 import PrivateRouter from "./PrivateRouter";
 
@@ -11,9 +11,10 @@ const AppRouter = () => {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
+        <NavBar />
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
 

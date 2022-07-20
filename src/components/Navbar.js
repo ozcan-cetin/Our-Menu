@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const navigate = useNavigate();
-  // const currentUser = {displayName:"özcan çetin"};
-  const currentUser = false;
+  const currentUser = {displayName:"özcan çetin"};
+  // const currentUser = false;
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-primary">

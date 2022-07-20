@@ -18,7 +18,7 @@ const handleLogin = (e) => {
         <img src={'https://picsum.photos/800/800'} alt="sample-movie" />
       </div>
       <div className="register-form">
-        <h1 className="form-title display-3 ">Register</h1>
+        <h1 className="form-title display-3 ">Login</h1>
         <form id="register" onSubmit={handleLogin}>
           <div className="mb-3">
             <label htmlFor="email" className="form-label">
@@ -46,7 +46,7 @@ const handleLogin = (e) => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div className="link">Forgot Password?</div>
+          <div className="link text-center mb-1">Forgot Password?</div>
           <input
             type="submit"
             className="btn btn-primary form-control"

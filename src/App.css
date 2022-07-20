@@ -27,14 +27,24 @@
 .singleMovie{
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+
+.movieImage{
+  position: relative;
 }
 
 .singleMovie:hover .movieInfo{
   left: 0;
-  bottom: 6rem;
+  bottom: 0rem;
   opacity: .8;
   transition: .50s;
   width: fit-content;
+  height:min-content;
+  text-align: center;
 }
 
 .movieInfo{

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {useNavigate} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { signIn } from '../auth/firebase';
 
 
 const Login = () => {
@@ -11,6 +12,7 @@ const Login = () => {
 
 const handleLogin = (e) => {
   e.preventDefault()
+  signIn(email, password, navigate)
 }  
   return (
     <div className="d-flex justify-content-center">

@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const NavBar = () => {
   const navigate = useNavigate();
-  const currentUser = {displayName:"özcan çetin"};
+  const {currentUser} = useContext(AuthContext)
+  // const currentUser = {displayName:"özcan çetin"};
   // const currentUser = false;
   return (
     <div>
@@ -19,7 +22,7 @@ const NavBar = () => {
                 <h5 className="mb-0 text-capitalize">
                   {currentUser.displayName}
                 </h5>
-                <button className="btn bg-info ms-2">Logout</button>
+                <button className="btn bg-info ms-2" onClick={() => navigate("/login")}>Logout</button>
               </>
             ) : (
               <>

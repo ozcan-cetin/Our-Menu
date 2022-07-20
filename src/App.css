@@ -4,12 +4,18 @@
   box-sizing: border-box;
 }
 
-.navbarContainer{
-  display: flex;
-  /* width: 500px; */
-  justify-content: flex-end;
-  /* border: 1px solid red; */
-}
+/* .register-form{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+} */
+
+/* .register-form form{
+  width:calc(100vw - 850px);
+  margin: auto;
+  margin-left: 1rem;
+} */
 
 .home form{
   display: flex;

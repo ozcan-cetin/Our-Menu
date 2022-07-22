@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import Home from "../pages/Home";
 import MovieDetail from "../pages/MovieDetail"
 import PrivateRouter from "./PrivateRouter";
+import Main from "../pages/Main";
 
 const AppRouter = () => {
   return (
@@ -13,8 +13,7 @@ const AppRouter = () => {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Main />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
 

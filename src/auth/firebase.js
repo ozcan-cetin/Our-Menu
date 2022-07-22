@@ -51,7 +51,7 @@ export const signIn = async (email, password, navigate) => {
       );
       navigate("/")
       // sessionStorage.setItem("user", JSON.stringify(userCredential.user));
-      console.log(userCredential)
+      // console.log(userCredential)
     } catch (error) {
       console.log(error);
     }
@@ -67,4 +67,10 @@ export const signIn = async (email, password, navigate) => {
         setCurrentUser(false);
       }
     });
+  };
+
+  //! logout
+
+  export const logOut = () => {
+    signOut(auth);
   };

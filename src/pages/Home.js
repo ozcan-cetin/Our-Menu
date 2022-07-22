@@ -31,9 +31,9 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
-    getMovies();
-  }, []);
+  // useEffect(() => {
+  //   getMovies();
+  // }, []);
 
   const getChooseMovies = (e) => {
     e.preventDefault();
@@ -41,13 +41,13 @@ const Home = () => {
     getMovies()
   };
 
-  const getDetailMovies = (id) => {
-    setMovies(movies.filter((item)=>{
-      return(
-        item.id === id && <MovieDetail item={item}/>
-      )
-    }))
-  }
+  // const getDetailMovies = (id) => {
+  //   setMovies(movies.filter((item)=>{
+  //     return(
+  //       item.id === id && <MovieDetail item={item}/>
+  //     )
+  //   }))
+  // }
 
   if (isLoading) {
     return <h1>Loading</h1>;
@@ -65,11 +65,11 @@ const Home = () => {
         />
         <button type="submit">Search</button>
       </form>
-      <div className="movieContainer">
+      {/* <div className="movieContainer">
         {movies?.map((item) => {
           return <Main key={item.id} item={item} getDetailMovies={getDetailMovies}/>;
         })}
-      </div>
+      </div> */}
     </div>
   );
 };

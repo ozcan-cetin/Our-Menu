@@ -2,7 +2,8 @@ import { initializeApp } from "firebase/app";
 import {
     getAuth,
     createUserWithEmailAndPassword,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    onAuthStateChanged
  } from "firebase/auth";
 
 // TODO: Replace the following with your app's Firebase project configuration
@@ -49,7 +50,21 @@ export const signIn = async (email, password, navigate) => {
         password
       );
       navigate("/")
+      // sessionStorage.setItem("user", JSON.stringify(userCredential.user));
+      console.log(userCredential)
     } catch (error) {
       console.log(error);
     }
+  };
+
+  export const userObserver = (setCurrentUser) => {
+    //? Kullanıcının signin olup olmadığını takip eden ve kullanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setCurrentUser(user);
+      } else {
+        // User is signed out
+        setCurrentUser(false);
+      }
+    });
   };

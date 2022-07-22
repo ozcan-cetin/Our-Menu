@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Main from "../components/Main";
+import Main from "./Main";
 import MovieDetail from "../pages/MovieDetail";
 
 const Home = () => {

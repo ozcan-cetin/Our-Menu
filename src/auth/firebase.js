@@ -7,7 +7,8 @@ import {
     signOut,
     updateProfile,
     GoogleAuthProvider,
-    signInWithPopup
+    signInWithPopup,
+    sendPasswordResetEmail
  } from "firebase/auth";
 
 // TODO: Replace the following with your app's Firebase project configuration
@@ -101,5 +102,20 @@ export const signUpProvider = (navigate) => {
     .catch((error) => {
       // Handle Errors here.
       console.log(error);
+    });
+};
+
+export const forgotPassword = (email) => {
+  //? Email yoluyla şifre sıfırlama için kullanılan firebase metodu
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+      // Password reset email sent!
+      // toastWarnNotify('Please check your mail box!');
+      alert("Please check your mail box!");
+    })
+    .catch((err) => {
+      // toastErrorNotify(err.message);
+      alert(err.message);
+      // ..
     });
 };

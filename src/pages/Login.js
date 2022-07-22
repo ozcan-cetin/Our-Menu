@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {useNavigate} from "react-router-dom";
-import { signIn, signUpProvider } from '../auth/firebase';
+import { forgotPassword, signIn, signUpProvider } from '../auth/firebase';
 
 
 const Login = () => {
@@ -50,7 +50,7 @@ const handleProviderLogin = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div className="link text-center mb-1">Forgot Password?</div>
+          <div className="link text-center mb-1" onClick={()=>forgotPassword(email)}>Forgot Password?</div>
           <input
             type="submit"
             className="btn btn-primary form-control"

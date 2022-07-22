@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { logOut } from "../auth/firebase";
 import { AuthContext } from "../context/AuthContext";
 
 const NavBar = () => {
@@ -22,7 +23,7 @@ const NavBar = () => {
                 <h5 className="mb-0 text-capitalize">
                   {currentUser.displayName}
                 </h5>
-                <button className="btn bg-info ms-2" onClick={() => navigate("/login")}>Logout</button>
+                <button className="btn bg-info ms-2" onClick={() => logOut()}>Logout</button>
               </>
             ) : (
               <>

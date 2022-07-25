@@ -2,7 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-// import { toastWarnNotify } from '../helpers/ToastNotify';
+import { toastWarnNotify } from '../helpers/ToastNotify';
 
 const IMG_API = 'https://image.tmdb.org/t/p/w1280';
 const defaultImage =
@@ -25,7 +25,7 @@ const MovieCard = ({ poster_path, title, overview, vote_average, id }) => {
       className="movie"
       onClick={() => {
         navigate('/details/' + id);
-        !currentUser && alert('Please log in to see detail');
+        !currentUser && toastWarnNotify('Please log in to see detail');
       }}
     >
       <img

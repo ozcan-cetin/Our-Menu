@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route, Outlet, Navigate } from "react-router-dom";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar.js";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import MovieDetail from "../pages/MovieDetail"

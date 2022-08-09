@@ -22,7 +22,7 @@ console.log(meal);
     setMenu(meal.filter((item)=>item.category==="shakes"))
   }
 
-  return <div className='d-flex justify-content-center mt-5 gap-2 mx-auto'>  
+  return <div className='d-flex justify-content-center mt-5 gap-1 mx-auto mx-3'>  
     <button className='btn btn-outline-warning rounded-1' onClick={handleAll}>All</button>
     <button className='btn btn-outline-warning rounded-1' onClick={handleBreakfast}>Breakfast</button>
     <button className='btn btn-outline-warning rounded-1' onClick={handleLunch}>Lunch</button>

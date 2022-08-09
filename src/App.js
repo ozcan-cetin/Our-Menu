@@ -1,17 +1,10 @@
-import { ToastContainer } from 'react-toastify';
-import './App.css';
-import AuthContextProvider from './context/AuthContext';
-import AppRouter from './router/AppRouter';
+import React, { useState } from 'react';
+import Menu from './Menu';
+import Categories from './Categories';
+import items from './data';
 
 function App() {
-  return (
-    <div className="App">
-      <AuthContextProvider>
-      <AppRouter/>
-      <ToastContainer/>
-      </AuthContextProvider>
-    </div>
-  );
+  return <h2>menu project setup</h2>;
 }
 
 export default App;

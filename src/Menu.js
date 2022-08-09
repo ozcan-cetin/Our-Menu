@@ -4,7 +4,7 @@ const Menu = ({item}) => {
   const {id, title, category, price, img, desc} = item
   console.log(title);
 
-  return <div className='single col-md-10 col-xl-6 mb-2 d-md-flex mx-auto bg-light gap-1'>
+  return <div className='single row col-md-10 col-xl-6 mb-2 d-md-flex mx-auto bg-light'>
     <div className='img-div col-md-5 col-xs-10'>
       <img className='rounded-1' src={img} alt={title} />
     </div>

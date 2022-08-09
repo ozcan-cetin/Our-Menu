@@ -4,11 +4,11 @@ const Menu = ({item}) => {
   const {id, title, category, price, img, desc} = item
   console.log(title);
 
-  return <div className='single col-md-10 col-xl-6 col-xs-12 d-md-flex mb-2 gap-2 mx-auto bg-light p-2'>
-    <div className='img-div col-md-3 col-xl-4 col-xs-6'>
+  return <div className='single row col-md-10 col-xl-6 mb-2 d-md-flex mx-auto bg-light'>
+    <div className='img-div col-md-5 col-xs-10'>
       <img className='rounded-1' src={img} alt={title} />
     </div>
-    <div className='bottom'>
+    <div className='bottom col-md-7 col-xs-10'>
      <h5 className='d-flex justify-content-between align-items-center title text-capitalize'>{title}<span>${price}</span></h5>
     <p className=''>{desc}</p> 
     </div>

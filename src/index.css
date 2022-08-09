@@ -26,3 +26,7 @@
 .title{
   border-bottom: 1px dotted gray;
 }
+
+button{
+  width: 10rem;
+}

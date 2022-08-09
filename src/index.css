@@ -6,8 +6,9 @@
 
 .img-div{
   width: 100%;
-  max-width: 200px;
-  max-height: 100px;
+  max-width: 450px;
+  height: 150px;
+  margin: auto;
 }
 
 .img-div img{
@@ -16,8 +17,12 @@
   object-fit: cover;
 }
 
-.menu-container{
-  width: 60rem;
-  /* margin: auto; */
-  /* border: solid; */
+
+.bottom{
+  max-width: 450px;
+  margin: auto;
+}
+
+.title{
+  border-bottom: 1px dotted gray;
 }

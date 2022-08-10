@@ -16,11 +16,11 @@ const handleClick = (meal) => {
 }
 
 
-  return <div className='d-flex justify-content-center mt-5 gap-1 mx-auto mx-3'>  
-    <button className='btn btn-outline-warning rounded-1' onClick={(e)=>handleClick(e.target.innerText.toLowerCase())}>All</button>
-    <button className='btn btn-outline-warning rounded-1' onClick={(e)=>handleClick(e.target.innerText.toLowerCase())}>Breakfast</button>
-    <button className='btn btn-outline-warning rounded-1' onClick={(e)=>handleClick(e.target.innerText.toLowerCase())}>Lunch</button>
-    <button className='btn btn-outline-warning rounded-1' onClick={(e)=>handleClick(e.target.innerText.toLowerCase())}>Shakes</button>
+ return <div className='d-flex justify-content-center mt-5 gap-1 mx-auto mx-3'>  
+    <button className='btn btn-outline-warning rounded-1 text-capitalize' onClick={(e)=>handleClick(e.target.innerText)}>all</button>
+    <button className='btn btn-outline-warning rounded-1 text-capitalize' onClick={(e)=>handleClick(e.target.innerText)}>breakfast</button>
+    <button className='btn btn-outline-warning rounded-1 text-capitalize' onClick={(e)=>handleClick(e.target.innerText)}>lunch</button>
+    <button className='btn btn-outline-warning rounded-1 text-capitalize' onClick={(e)=>handleClick(e.target.innerText)}>shakes</button>
   
   </div>;
 };
